@@ -38,9 +38,7 @@ Explain how to run the automated tests for this system
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.gatech.edu/hlu82/bookworms/settings/collaboration) who participated in this project.
 
 ## License
 
