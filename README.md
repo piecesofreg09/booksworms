@@ -16,7 +16,9 @@ Make sure Python3.6 or higher is installed. Or the package might not work.
 python -m pip install .
 ```
 
-3. To uninstall, type in the command window
+### Uninstall
+
+To uninstall, type in the command window
 
 ```
 python -m pip uninstall bookworms
