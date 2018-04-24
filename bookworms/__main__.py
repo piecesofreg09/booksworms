@@ -9,7 +9,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description = 'bookworms portal')
 parser.add_argument('functionality', help = 'Actions that can be done. \
-    Actions are:\n train (t), visualize (v)')
+    Actions are: train (t), visualize (v)')
 parser.add_argument('-f', '--file', nargs = '*', 
                     dest = 'file', help = 'The files that are used for training')
 
@@ -26,3 +26,4 @@ if args.functionality == 'train' or args.functionality == 't':
 if args.functionality == 'visualize' or args.functionality == 'v':
     from .visualize import visualize
     visualize()
+    
