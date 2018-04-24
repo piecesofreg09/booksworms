@@ -1,5 +1,5 @@
 """
-setup for booksworms
+setup for bookworms
 """
 
 # Always prefer setuptools over distutils
@@ -37,24 +37,14 @@ setup(
     ],
 
     keywords='book recommendation',  # Optional
-
+    
     
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # Required
+    
     install_requires=[],  # Optional
-
-    # If there are data files included in your packages that need to be
-    # installed, specify them here.
-    #
-    # If using Python 2.6 or earlier, then these have to be included in
-    # MANIFEST.in as well.
+    
     package_data={  # Optional
-        'sample': ['package_data.dat'],
+        'bookworms': ['sample_data/*'],
     },
-
-    # Although 'package_data' is the preferred approach, in some case you may
-    # need to place data files outside of your packages. See:
-    # http://docs.python.org/3.4/distutils/setupscript.html#installing-additional-files
-    #
-    # In this case, 'data_file' will be installed into '<sys.prefix>/my_data'
-    data_files=[('my_data', ['data/data_file'])],  # Optional
+    
 )
