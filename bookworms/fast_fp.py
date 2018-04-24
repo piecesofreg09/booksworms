@@ -2,7 +2,8 @@
 Tested on python 3.6
 
 This function creates recommendation based readers basket, 
-counting frequencies of pairs of books
+counting frequencies of pairs of books, using association rule
+mining.
 
 These pairs already eliminates the low frequency appearances, 
 support will be the eliminating factor
@@ -168,4 +169,6 @@ def fast_fpv2(support_value, data_input):
         json.dump(res_t_small, output)
     print('time at completion:')
     print(time.time()- t1)
-    print('\n\n\n')    
+    print('\n\n\n')
+    
+    
