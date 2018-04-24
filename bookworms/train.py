@@ -42,5 +42,9 @@ def train(input, us_support):
     # train the collaborative filtering
 
 
+    # train the ricky's algorithm
+    
+    
     # train the ASM
     fast_fp(support, 'reader_basket', True)
+    
