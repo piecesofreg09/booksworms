@@ -1,9 +1,9 @@
 '''
 Tested on python 3.6
 
-This function trains the data input.
-First it transform the data into 4 subdatasets.
-
+This function visualizes the data from data transformation and
+training. If no training and data transformation is done previously,
+this function will load sample dataset, which is 100 readers.
 
 Usage:
 
@@ -36,5 +36,9 @@ def visualize():
     users = list(reader_basket.keys())
     random_user = random.choice(users)
 
-    # prepare for the flask
-    print('Setting web browser')
+    # prepare for the flask website visulization
+    print('Setting web page for visualization')
+    # NEEDS IMPLEMENTATION
+    
+    
+    
