@@ -4,37 +4,67 @@ Book recommendation system
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Make sure Python3.6 or higher is installed. Or the package might not work.
 
-### Prerequisites
+### Installation
 
-What things you need to install the software and how to install them
+1. Install from PyPI by pip
 
-```
-Give examples
-```
+2. Install by package
 
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
+After downloading and extracting the package, direct into the directory with the file `setup.py`. Then install the module by
 
 ```
-Give the example
+python -m pip install .
 ```
 
-And repeat
+3. To uninstall, type in the command window
 
 ```
-until finished
+python -m pip uninstall bookworms
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Module Usage
+
+After installation, the module has two main functionality, training and visulization. 
+
+1. For training, add the following code in your script
+
+```
+from bookworms.train import train
+train(['input.json'], support) # input must be list, with file names as string in it. Empty list is allowed.
+```
+
+2. For visualization, add the following code in your script
+
+```
+from bookworms.visualize import visualize
+visualize()
+```
+
+## Script Usage
+
+After installation, the file can also be used as a script. Type in the following command in command window will result in the same result as in Module Usage.
+
+1. For training
+```
+python -m bookworms train -f input.json -s support
+```
+
+2. For visualization
+```
+python -m bookworms visualization
+```
+
+Type in `python -m bookworms -h` for more help.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+Test function and a small dataset is included in the `.test\` directory. Running the following command in the command window directory will show the process of training and visualization.
+
+```
+python test.py
+```
 
 ## Authors
 
