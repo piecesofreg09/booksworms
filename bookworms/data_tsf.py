@@ -19,7 +19,7 @@ Example: data_transformation('1,2,3,4', [dat1, dat2, dat3])
 
 
 Output Format:
-        reader_basket: {readerid: {'bookisbn13':{'name':name, 'rating':rating},....}}
+        reader_basket: {readerid: {'bookisbn13':{'name':name, 'user_rating':rating, 'avg_rating':rating},....}}
         friends: {readid: {'name':name, 'friends':  {friendsid:friends_name,...}}}
         book_basket: {'bookisbn13': [readerid,...]}
         books: {'bookisbn13':{'isbn':, 'avg_rating':, 'description':, 'name':}}
