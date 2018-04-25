@@ -8,9 +8,7 @@ Make sure Python3.6 or higher is installed. Or the package might not work.
 
 ### Installation
 
-1. Install from PyPI by pip
-
-2. Install by package. After downloading and extracting the package, direct into the directory with the file `setup.py`. Then install the module by
+Install by package. After downloading and extracting the package, direct into the directory with the file `setup.py`. Then install the module by
 
 ```
 python -m pip install .
