@@ -2,11 +2,7 @@
 
 2. Add the additional required packages needed for Ricky's alg or CF in `setup.py`, so that when the bookworms module is installed, the required packages will be installed at the same time.
 
-3. Put the visualization method into the visualize.py, where it is lablled with 
-```
-# NEEDS IMPLEMENTATION
-```
-on line 41. The visualization component should be working with the local recommendation algorithm.
+3. Put the visualization method into the visualize.py, where it is lablled with `# NEEDS IMPLEMENTATION` on line 41. The visualization component should be working with the local recommendation algorithm.
 
 4. When import inside the `./bookworms/ package`, use `from .file import func` instead of `from file import func`, the latter would trigger package not found error. 
 
