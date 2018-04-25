@@ -22,7 +22,7 @@ Output Format:
         reader_basket: {readerid: {'bookisbn13':{'name':name, 'rating':rating},....}}
         friends: {readid: {'name':name, 'friends':  {friendsid:friends_name,...}}}
         book_basket: {bookisbn13: [readerid,...]}
-        books: {bookisbn13:{isbn:, avg_rating:, description:}}
+        books: {bookisbn13:{isbn:, avg_rating:, description:, name:}}
 '''
 
 
