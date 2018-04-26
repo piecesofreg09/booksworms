@@ -4,11 +4,11 @@ from bookworms.visualize import visualize
 
 def test():
     print('training input json')
-    train(['input.json'], 10)
+    train(['input.json'], 10, 10)
     
     print('')
     print('when no input file is specified')
-    train([], 10)
+    train([], 10, 10)
     
     print('')
     print('visualize')
@@ -17,3 +17,4 @@ def test():
 
 if __name__ == '__main__':
     test()
+    
