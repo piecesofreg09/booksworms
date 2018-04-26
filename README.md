@@ -31,6 +31,7 @@ After installation, the module has two main functionality, training and visuliza
 ```
 from bookworms.train import train
 train(['input.json'], support, variable) 
+
 # input must be list, with file names as string in it. Empty list is allowed.
 # suppor is the variable for ARM training
 # variable is currently an arbitrary variable
