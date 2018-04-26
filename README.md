@@ -74,5 +74,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Goodreads.com
+* Data is scraped from Goodreads.com, only for academic research purpose, and will be deleted after the project due.
+* suppress_output() is shared from https://thesmithfam.org/blog/2012/10/25/temporarily-suppress-console-output-in-python/.
 
