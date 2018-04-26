@@ -22,7 +22,8 @@ parser.add_argument('-s', '--support', dest = 'support',
                     help = 'set up support for ARM training',
                     default = 10, type = int)
 
-# If you need more argument, change the following line into what you need
+# If you need more argument(s), change the following line into what you need or add
+# another line if you need more than 2 arguments
 parser.add_argument('-v', # name for the argument
                     '--variable', # long name for the argument
                     dest = 'variable', # the name you use for accessing the variable from args
@@ -34,7 +35,7 @@ args = parser.parse_args()
 
 if args.functionality == 'train' or args.functionality == 't':
     from .train import train
-    train(args.file, args.support)
+    train(args.file, args.support, args.variable)
     
 if args.functionality == 'visualize' or args.functionality == 'v':
     from .visualize import visualize
