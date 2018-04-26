@@ -3,7 +3,7 @@ Tested on python 3.6
 
 This function trains the data input.
 First it transform the data into 4 subdatasets.
-
+Then it trains the data using separate algorithms, currently only ARM is used.
 
 Usage:
 
@@ -15,15 +15,18 @@ import sys, os
 from .data_tsf import data_transformation
 from .fast_fp import fast_fp
 
-def train(input, us_support):
+def train(input_list, us_support, variable):
+    # input is in the format of a list, ['input1', 'input2', ...]
+    # us_support is user defined support for ARM
+    # variable is the arbitrary variable defined in __main__.py
     
     # getting input data
     try:
-        if len(input) < 1:
+        if len(input_list) < 1:
             raise Exception('No input file')
         input_str = []
-        for i in range(len(input)):
-            input_str.append(input[i])
+        for i in range(len(input_list)):
+            input_str.append(input_list[i])
         
     except:
         print('------------------------------------------------------')
