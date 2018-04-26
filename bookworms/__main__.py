@@ -1,5 +1,10 @@
 '''
-Main function
+Implementation of the script usage
+
+The main function takes three arguments:
+functionality: train or v
+-f: directory to file name
+-s: support for ARM training
 '''
 
 import os
@@ -7,14 +12,22 @@ import sys
 import json
 import argparse
 
+# Using python defined argument parser
 parser = argparse.ArgumentParser(description = 'bookworms portal')
 parser.add_argument('functionality', help = 'Actions that can be done. Actions are: train (t), visualize (v)')
 parser.add_argument('-f', '--file', nargs = '*', 
                     dest = 'file', help = 'The files that are used for training')
 
 parser.add_argument('-s', '--support', dest = 'support',
-                    help = 'set up support for ASM training',
+                    help = 'set up support for ARM training',
                     default = 10, type = int)
+
+# If you need more argument, change the following line into what you need
+parser.add_argument('-v', # name for the argument
+                    '--variable', dest = 'variable', # long name for the argument
+                    help = 'set up an arbitrary variable', # help message when type in -h for help
+                    default = 5, # defualt value is set to 5
+                    type = int)
 
 args = parser.parse_args()
 
@@ -26,3 +39,5 @@ if args.functionality == 'visualize' or args.functionality == 'v':
     from .visualize import visualize
     visualize()
     
+if args.variable > 0:
+    print('inside arbitrary variable')
