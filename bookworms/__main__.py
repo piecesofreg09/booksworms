@@ -24,7 +24,8 @@ parser.add_argument('-s', '--support', dest = 'support',
 
 # If you need more argument, change the following line into what you need
 parser.add_argument('-v', # name for the argument
-                    '--variable', dest = 'variable', # long name for the argument
+                    '--variable', # long name for the argument
+                    dest = 'variable', # the name you use for accessing the variable from args
                     help = 'set up an arbitrary variable', # help message when type in -h for help
                     default = 5, # defualt value is set to 5
                     type = int)
