@@ -1,5 +1,8 @@
 '''
 List of utility functions
+
+suppress_stdout() suppresses the print() function temporarily
+
 '''
 
 from contextlib import contextmanager
