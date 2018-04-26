@@ -70,7 +70,7 @@ See also the list of [contributors](https://github.gatech.edu/hlu82/bookworms/se
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.txt) file for details
+This project is licensed under the MIT License - see the [LICENSE.txt](LICENSE.txt) file for details
 
 ## Acknowledgments
 
