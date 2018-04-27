@@ -42,6 +42,10 @@ def visualize():
     # get the users and generate one random user    
     users = list(reader_basket.keys())
     random_user = random.choice(users)
+    
+    # get the first book of the random user for friend-weighted algorithm
+    all_book_keys = list(reader_basket[random_user].keys())
+    first_book = all_book_keys[0]
 
     # prepare for the flask website visulization
     print('Setting web page for visualization')
