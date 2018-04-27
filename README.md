@@ -14,7 +14,9 @@ Install by package. After downloading and extracting the package, direct into th
 python -m pip install .
 ```
 
-To run the friend weighted recommendation system, Sematch (https://github.com/gsi-upm/sematch) must be manually installed.
+To run the friend weighted recommendation system, the following must be installed manually:
+- Sematch (https://github.com/gsi-upm/sematch)
+- NLTK (use "import nltk" command followed by "nltk.download()" then popup window will appear to manually install)
 
 ### Uninstall
 
