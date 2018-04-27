@@ -3,10 +3,10 @@ import math
 
 class cf_engine(object):
     def __init__(self,**kwargs):
-        self.dataset = 'dat_7000.json'
+        self.dataset = 'sample_data/input_100.json'
         self.match = 2
         self.kNN = 20
-        self.recos = 10
+        self.recos = 5
         self.min_books = 2
         self.test_size = 0.5
         try:
@@ -48,16 +48,16 @@ class cf_engine(object):
         for k,v in self.data.items():
             num_books = 0
             for x,y in v['books'].items():
-                if isinstance(y['isbn'], str):
+                if isinstance(y['isbn13'], str):
                     num_books += 1
             if num_books >= self.min_books:
                 for x,y in v['books'].items():
-                    if isinstance(y['isbn'], str):
-                        self.isbn_match[y['isbn']] = x
+                    if isinstance(y['isbn13'], str):
+                        self.isbn_match[y['isbn13']] = x
                         try:
-                            self.people_data[k].update({y['isbn']:y['user_rating']})
+                            self.people_data[k].update({y['isbn13']:y['user_rating']})
                         except:
-                            self.people_data[k] = {y['isbn']:y['user_rating']}
+                            self.people_data[k] = {y['isbn13']:y['user_rating']}
     
     def user_prep(self,user):
         self.user = user
@@ -182,9 +182,10 @@ class cf_engine(object):
             op_num = self.recos
         for i in range(op_num):
             self.prediction.append(self.isbn_match[self.sorted_prediction[i][0]])
-        with open('prediction.txt', 'w') as f:
+        with open('prediction', 'w+') as f:
             for book in self.prediction:
-                f.write(book + '\n')
+                json.dump(book,f)
+                f.write('\n')
     
     def RMSE(self,user_data,prediction):
         squared_sum = 0
