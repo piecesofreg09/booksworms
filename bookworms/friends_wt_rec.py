@@ -213,12 +213,14 @@ for i in range(10):
 	local_book_names.append(book_names[recommended_list[-i]]["name"])
 print(local_book_names)
 
-rec_dictionary = {}
+output_list = []
 for i in range(5):
-	rec_dictionary[recommended_list[-i]] = book_names[recommended_list[-i]]["name"]
+	rec_dictionary = {}
+	rec_dictionary["book"] = book_names[recommended_list[-i]]["name"]
+	output_list.append(rec_dictionary)
 
 with open('loca_recommendations.json', 'w') as fp:
-    json.dump(rec_dictionary, fp)
+    json.dump(output_list, fp)
 # print(create_candidate_book_set(query_word_cloud, friends_books))
 # print(query_word_cloud(query_word_cloud, friends_books))
 
