@@ -14,9 +14,6 @@ Install by package. After downloading and extracting the package, direct into th
 python -m pip install .
 ```
 
-To run the friend weighted recommendation system, the following must be installed manually:
-- Sematch (https://github.com/gsi-upm/sematch)
-- NLTK (use "import nltk" command followed by "nltk.download()" then popup window will appear to manually install)
 
 ### Uninstall
 
@@ -30,6 +27,13 @@ python -m pip uninstall bookworms
 
 Data packages needed to run the freind weighted reommendation:
 https://gtvault-my.sharepoint.com/:f:/g/personal/mjohnson316_gatech_edu/EuZWWTPJMhpMmRaTRXOmS5sBOh0KJSWJ1xopxA4QGiMSKw
+
+
+To run the friend weighted recommendation system, the following must be installed manually:
+- Sematch (https://github.com/gsi-upm/sematch)
+- NLTK (use "import nltk" command followed by "nltk.download()" then popup window will appear to manually install)
+- Sensegram (https://github.com/tudarmstadt-lt/sensegram)
+- Gensim (https://github.com/rare-technologies/gensim)
 
 ## Module Usage
 
