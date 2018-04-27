@@ -15,8 +15,8 @@ import sys, os
 import random
 import json
 
-def visualize():
-    # visualize() takes no input argument, as intput argument should be generated
+def visualize(input_file):
+    # visualize() takes one input argument, as intput argument should be generated
     # from the training process. If train is not called, visualize() will use the 
     # predownloaded data for visualization
     
