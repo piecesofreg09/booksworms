@@ -5,6 +5,9 @@ import numpy as np
 import random
 import math
 
+# it takes in the user id and the query book id as the input arguments and print the global and local recommendations.
+# usage - python3 friends_wt_rec.py user_id book_id
+
 # getting most frequent words from a list
 def most_frequent_words(word_list, num_of_words):
 	frequencies = {}
