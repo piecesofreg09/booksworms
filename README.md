@@ -10,9 +10,11 @@ Make sure Python3.6 or higher is installed. Or the package might not work.
 
 Install by package. After downloading and extracting the package, direct into the directory with the file `setup.py`. Then install the module by
 
-```
+```A 
 python -m pip install .
 ```
+
+To run the friend weighted recommendation system, Sematch (https://github.com/gsi-upm/sematch) must be manually installed.
 
 ### Uninstall
 
@@ -21,6 +23,11 @@ To uninstall, type in the command window
 ```
 python -m pip uninstall bookworms
 ```
+
+## Downloads
+
+Data packages needed to run the freind weighted reommendation:
+https://gtvault-my.sharepoint.com/:f:/g/personal/mjohnson316_gatech_edu/EuZWWTPJMhpMmRaTRXOmS5sBOh0KJSWJ1xopxA4QGiMSKw
 
 ## Module Usage
 
