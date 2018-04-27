@@ -41,7 +41,7 @@ setup(
     
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),  # Required
     
-    install_requires=[],  # Optional
+    install_requires=['sensegram'],  # Optional
     
     package_data={  # Optional
         'bookworms': ['sample_data/*'],
