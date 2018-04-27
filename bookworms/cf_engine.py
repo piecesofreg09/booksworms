@@ -41,23 +41,23 @@ class cf_engine(object):
             self.engine_perf()
 
     def load_data(self,min_books):
-        self.json_data = open(self.dataset).read()
-        self.data = json.loads(self.json_data)
-        self.people_data = {}
-        self.isbn_match = {}
-        for k,v in self.data.items():
-            num_books = 0
-            for x,y in v['books'].items():
-                if isinstance(y['isbn13'], str):
-                    num_books += 1
-            if num_books >= self.min_books:
+        with open(self.dataset,'r') as data_file:  
+            data = json.load(data_file)
+            self.people_data = {}
+            self.isbn_match = {}
+            for k,v in data.items():
+                num_books = 0
                 for x,y in v['books'].items():
                     if isinstance(y['isbn13'], str):
-                        self.isbn_match[y['isbn13']] = x
-                        try:
-                            self.people_data[k].update({y['isbn13']:y['user_rating']})
-                        except:
-                            self.people_data[k] = {y['isbn13']:y['user_rating']}
+                        num_books += 1
+                if num_books >= self.min_books:
+                    for x,y in v['books'].items():
+                        if isinstance(y['isbn13'], str):
+                            self.isbn_match[y['isbn13']] = x
+                            try:
+                                self.people_data[k].update({y['isbn13']:y['user_rating']})
+                            except:
+                                self.people_data[k] = {y['isbn13']:y['user_rating']}
     
     def user_prep(self,user):
         self.user = user
