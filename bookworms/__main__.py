@@ -42,4 +42,4 @@ if args.functionality == 'visualize' or args.functionality == 'v':
     visualize(args.file, os.getcwd())
     
 if args.variable > 0:
-    print('inside arbitrary variable')
+    print('')
