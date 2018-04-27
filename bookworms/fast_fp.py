@@ -167,6 +167,8 @@ def fast_fpv2(support_value, data_input):
     with open('books_associated_s=' + str(support) + '_small_' \
         + str(small_res_size), "w+") as output:
         json.dump(res_t_small, output)
+    with open('books_associated', "w+") as output:
+        json.dump(res_t_small, output)
     print('time at completion:')
     print(time.time()- t1)
     print('\n\n\n')
