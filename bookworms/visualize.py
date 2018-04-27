@@ -16,11 +16,27 @@ import random
 import json
 
 def visualize(input_file):
-    # visualize() takes one input argument, as intput argument should be generated
-    # from the training process. If train is not called, visualize() will use the 
-    # predownloaded data for visualization
+    # visualize() takes one input argument, which is unstructured, as it is
+    # required by the collaborative filtering algorithm
     
     
+    try:
+        # open input raw data
+        if len(input_file) < 1:
+            raise Exception('No input file')
+        else:
+            input_str = input_file
+    except:
+        print('------------------------------------------------------')
+        print('No input file is specified. Using sample_data instead.')
+        script_dir = os.path.dirname(__file__)
+        rel_path = 'sample_data'
+        file_name = 'input_100.json'
+        sample_data_path = os.path.join(script_dir, rel_path, file_name)
+        input_str = [sample_data_path]
+    
+    # If train is not called, hence 'reader_basket' is not generated, 
+    # visualize() will use the predownloaded data for visualization
     try:
         # open input data
         with open('reader_basket', 'r') as input:
