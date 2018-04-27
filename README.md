@@ -34,6 +34,7 @@ To run the friend weighted recommendation system, the following must be installe
 - NLTK (use "import nltk" command followed by "nltk.download()" then popup window will appear to manually install)
 - Sensegram (https://github.com/tudarmstadt-lt/sensegram)
 - Gensim (https://github.com/rare-technologies/gensim)
+- win_sense_words.txt 
 
 ## Module Usage
 
