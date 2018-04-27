@@ -54,8 +54,12 @@ train(['input.json'], support, variable)
 2. For visualization, add the following code in your script
 
 ```
+import os
 from bookworms.visualize import visualize
-visualize()
+visualize(['input.json'], input_dir)
+
+# input must be list, with file names as string in it. Empty list is allowed.
+# input_dir is the direcotry, can be got from os.getcwd('input.json')
 ```
 
 ## Script Usage

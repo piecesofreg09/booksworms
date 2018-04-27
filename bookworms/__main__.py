@@ -39,7 +39,7 @@ if args.functionality == 'train' or args.functionality == 't':
     
 if args.functionality == 'visualize' or args.functionality == 'v':
     from .visualize import visualize
-    visualize(args.file)
+    visualize(args.file, os.getcwd())
     
 if args.variable > 0:
-    print('inside arbitrary variable')
+    print('')
