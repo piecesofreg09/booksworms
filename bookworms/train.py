@@ -11,7 +11,7 @@ python train input_data
 
 '''
 
-import sys, os
+import sys, os, shutil
 from .data_tsf import data_transformation
 from .fast_fp import fast_fp
 
