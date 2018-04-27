@@ -1,3 +1,6 @@
+# this script creates top keywords from the description of each book using tf-idf and store those keywords in a txt file
+# books' isbn as one column and their corresponding keywords in other column
+
 import sys
 import json
 import gensim
