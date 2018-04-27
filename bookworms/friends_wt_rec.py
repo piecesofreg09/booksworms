@@ -5,6 +5,7 @@ import numpy as np
 import random
 import math
 
+# this script uses the sense words created by create sense words file and the raw json file to recommend books
 # it takes in the user id and the query book id as the input arguments and print the global and local recommendations.
 # usage - python3 friends_wt_rec.py user_id book_id
 
