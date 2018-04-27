@@ -1,3 +1,6 @@
+# this script takes in the keywords file created by create_keywords.py file and creates sense words (words which are frequently
+# used together in english language) for each keyword of each book and store those sense words in an output file with isbns as 
+# one column and their corresponding sense words in the other column.
 import sys
 import sensegram
 import json
