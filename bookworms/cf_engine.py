@@ -181,12 +181,9 @@ class cf_engine(object):
         else:
             op_num = self.recos
         for i in range(op_num):
-            self.prediction.append(self.isbn_match[self.sorted_prediction[i][0]])
-        with open('prediction', 'w+') as f:
-            for book in self.prediction:
-                json.dump(book,f)
-                f.write('\n')
-    
+            self.prediction.append({'book':self.isbn_match[self.sorted_prediction[i][0]]})
+        return self.prediction
+
     def RMSE(self,user_data,prediction):
         squared_sum = 0
         count = 0
